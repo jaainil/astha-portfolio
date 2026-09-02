@@ -13,18 +13,18 @@ function SkillRow({
 }) {
   if (skills.length === 0 && !unlistedCount) return null;
   return (
-    <div className="mt-3 flex flex-wrap items-center gap-1.5">
+    <div className="mt-4 flex flex-wrap items-center gap-2">
       {skills.map((skill) => (
         <span
           key={skill}
-          className="border border-ink-faint/50 px-2 py-0.5 text-[0.68rem] uppercase tracking-[0.08em] text-ink-dim"
+          className="border border-ink-faint/60 px-2.5 py-1 text-[0.78rem] uppercase tracking-[0.06em] text-ink-dim"
           title={`via ${originLabel}`}
         >
           {skill}
         </span>
       ))}
       {unlistedCount ? (
-        <span className="px-1 text-[0.68rem] italic text-ink-faint">
+        <span className="px-1 text-[0.78rem] italic text-ink-faint">
           +{unlistedCount} more, unlisted on source
         </span>
       ) : null}
@@ -44,51 +44,71 @@ export function ChapterPanel({
   return (
     <div
       ref={panelRef}
-      className="flex min-h-[60vh] flex-col justify-center px-6 py-24 lg:min-h-screen lg:px-14"
+      className="flex min-h-[68svh] flex-col justify-center px-6 py-16 lg:min-h-[80svh] lg:px-14 lg:py-14"
     >
       <div
-        className={`max-w-xl border-l-2 pl-6 transition-colors duration-500 ${
+        className={`max-w-2xl border-l-2 pl-6 transition-colors duration-500 sm:pl-8 ${
           isActive ? "border-needle" : "border-panel-600"
         }`}
       >
-        <div className="flex items-baseline gap-3">
+        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
           <span
-            className={`font-display text-sm tracking-[0.18em] transition-colors duration-500 ${
+            className={`font-display text-base tracking-[0.18em] transition-colors duration-500 ${
               zone.redline ? "text-needle-bright" : "text-brass"
             }`}
           >
             {zone.yearLabel}
           </span>
-          <span className="font-display text-xs uppercase tracking-[0.24em] text-ink-faint">
+          <span className="font-display text-sm uppercase tracking-[0.24em] text-ink-faint">
             {zone.tickLabel}
           </span>
         </div>
 
-        <h2 className="mt-3 font-display text-3xl uppercase leading-[1.05] text-balance text-ink sm:text-4xl">
+        <h2 className="mt-4 font-display text-4xl uppercase leading-[1.02] text-balance text-ink sm:text-6xl">
           {zone.headline}
         </h2>
 
-        <div className="mt-8 space-y-7">
+        <div className="mt-10 space-y-9">
           {zone.facts.map((fact) => (
             <div key={`${fact.org}-${fact.role}`}>
-              <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
-                <span className="text-ink-faint">ROLE</span>
-                <span className="font-medium text-ink">{fact.role}</span>
-                <span className="text-ink-faint">ORG</span>
-                <span className="text-ink-dim">{fact.org}</span>
-                <span className="text-ink-faint">WHERE</span>
-                <span className="text-ink-dim">{fact.location}</span>
-                <span className="text-ink-faint">WHEN</span>
-                <span className="text-ink-dim">
+              {fact.employment && fact.employment !== "Education" ? (
+                <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-panel-700 pb-2.5 text-[0.78rem] uppercase tracking-[0.1em] text-ink-faint">
+                  <span>{fact.employment}</span>
+                  {fact.duration ? <span aria-hidden="true">·</span> : null}
+                  {fact.duration ? <span>{fact.duration}</span> : null}
+                </div>
+              ) : null}
+              <div className="grid grid-cols-[4.5rem_1fr] gap-x-4 gap-y-1.5 text-base sm:grid-cols-[5.5rem_1fr]">
+                <span className="pt-0.5 text-[0.72rem] uppercase tracking-[0.1em] text-ink-faint">
+                  Role
+                </span>
+                <span className="text-lg font-medium leading-snug text-ink">
+                  {fact.role}
+                </span>
+                <span className="pt-0.5 text-[0.72rem] uppercase tracking-[0.1em] text-ink-faint">
+                  Org
+                </span>
+                <span className="text-lg leading-snug text-ink-dim">
+                  {fact.org}
+                </span>
+                <span className="pt-0.5 text-[0.72rem] uppercase tracking-[0.1em] text-ink-faint">
+                  Where
+                </span>
+                <span className="text-lg leading-snug text-ink-dim">
+                  {fact.location}
+                </span>
+                <span className="pt-0.5 text-[0.72rem] uppercase tracking-[0.1em] text-ink-faint">
+                  When
+                </span>
+                <span className="text-lg leading-snug text-ink-dim">
                   {fact.dates}
-                  {fact.duration ? ` · ${fact.duration}` : ""}
                 </span>
               </div>
-              <p className="mt-2 max-w-md text-[0.95rem] leading-relaxed text-ink-dim">
+              <p className="mt-3 max-w-xl text-lg leading-relaxed text-ink-dim">
                 {fact.detail}
               </p>
               {fact.note ? (
-                <p className="mt-1 text-[0.85rem] italic text-brass-bright">
+                <p className="mt-1.5 text-[0.95rem] italic text-brass-bright">
                   {fact.note}
                 </p>
               ) : null}
@@ -106,12 +126,12 @@ export function ChapterPanel({
             href={person.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-3 border-2 border-needle bg-needle/10 px-6 py-3 font-display text-sm uppercase tracking-[0.18em] text-needle-bright transition-colors duration-200 hover:bg-needle/20"
+            className="mt-12 inline-flex items-center gap-3 border-2 border-needle bg-needle/10 px-7 py-3.5 font-display text-base uppercase tracking-[0.16em] text-needle-bright transition-colors duration-200 hover:bg-needle/20"
           >
             Connect on LinkedIn
             <svg
               viewBox="0 0 12 12"
-              className="h-3.5 w-3.5"
+              className="h-4 w-4"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.5"

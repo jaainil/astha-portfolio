@@ -20,19 +20,19 @@ colors:
 typography:
   display:
     fontFamily: "Big Shoulders Display Variable, Arial Narrow, sans-serif"
-    fontSize: "2.25rem"
+    fontSize: "3.75rem"
     fontWeight: 400
-    lineHeight: 1.05
-    letterSpacing: "0.06em"
+    lineHeight: 1.02
+    letterSpacing: "normal"
   body:
     fontFamily: "Barlow, Helvetica Neue, sans-serif"
-    fontSize: "0.95rem"
+    fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.625
     fontFeature: '"tnum" 1, "lnum" 1'
   label:
     fontFamily: "Barlow, Helvetica Neue, sans-serif"
-    fontSize: "0.68rem"
+    fontSize: "0.78rem"
     fontWeight: 500
     letterSpacing: "0.08em"
 rounded:
@@ -45,8 +45,8 @@ spacing:
   section-y: "6rem"
   footer-y: "7rem"
   panel-gap: "1.5rem"
-  chapter-min-h: "100vh"
-  chapter-min-h-mobile: "60vh"
+  chapter-min-h: "80svh"
+  chapter-min-h-mobile: "68svh"
   cooldown-beat: "60vh"
 components:
   link-cta-needle:
@@ -63,13 +63,13 @@ components:
     backgroundColor: "{colors.needle}"
     textColor: "{colors.panel-950}"
     rounded: "{rounded.full}"
-    height: "6rem"
-    width: "6rem"
+    height: "7rem"
+    width: "7rem"
   chip-skill:
     backgroundColor: "transparent"
     textColor: "{colors.ink-dim}"
     rounded: "{rounded.none}"
-    padding: "2px 8px"
+    padding: "4px 10px"
   card-bank:
     backgroundColor: "rgba(20,22,24,0.6)"
     textColor: "{colors.ink}"
@@ -105,7 +105,7 @@ Density follows the instrument metaphor: information is arranged in labeled rows
 The palette is a machine shop at night: six charcoal/steel panel tones for every surface and seam, three ivory-to-gray "engraved" text tones, a warm brass family for fittings and annotations, and a needle-red family kept almost entirely in reserve. Hex values below are the normative source (`:root` custom properties in `src/app/globals.css`, mapped into Tailwind v4 via `@theme inline`).
 
 ### Primary — the needle-red family
-- **Needle Red** (`{colors.needle}` / `#e2402c`): The live needle itself, redline states, text selection background, and the circular Connect CTA. This is the site's single hottest color and its scarcest.
+- **Needle Red** (`{colors.needle}` / `#e2402c`): The live needle itself, redline states, text selection background, the 6% tint on the service record's AGM row, and the circular Connect CTA. This is the site's single hottest color and its scarcest.
 - **Needle Hot** (`{colors.needle-bright}` / `#ff6a48`): Redline text and CTA text (higher-contrast variant of needle red for small type), the global focus ring, and the top of the Connect disc's radial gradient.
 - **Cooled Needle** (`{colors.needle-dim}` / `#7a2c22`): The deep end of the Connect disc gradient and the scrollbar thumb on hover — red fading back into the panel.
 
@@ -116,10 +116,10 @@ The palette is a machine shop at night: six charcoal/steel panel tones for every
 
 ### Neutral — instrument-panel steel
 - **Panel Black** (`{colors.panel-950}` / `#0d0f10`): The page ground — body background, top bar, footer, hero gradient terminus.
-- **Panel Charcoal** (`{colors.panel-900}` / `#141618`): Recessed groove behind the dial face, skill-bank cards at 60% opacity, scrollbar track.
-- **Panel Graphite** (`{colors.panel-800}` / `#1c1f22`): The needle hub fill.
-- **Panel Seam** (`{colors.panel-700}` / `#262a2e`): All 1px structural seams — section borders, card borders, mobile top-bar underline, lamp wells.
-- **Panel Line** (`{colors.panel-600}` / `#34383d`): Inactive chapter left rules and the scrollbar thumb.
+- **Panel Charcoal** (`{colors.panel-900}` / `#141618`): Recessed groove behind the dial face, skill-bank cards at 60% opacity, the service-record table header, scrollbar track.
+- **Panel Graphite** (`{colors.panel-800}` / `#1c1f22`): The needle hub fill, and the 60% hover tint on service-record rows.
+- **Panel Seam** (`{colors.panel-700}` / `#262a2e`): All 1px structural seams — section borders, card borders, mobile top-bar underline, lamp wells, the service-record table frame and its row dividers, chapter log-strip underlines.
+- **Panel Line** (`{colors.panel-600}` / `#34383d`): Inactive chapter left rules, the service-record header rule, the gauge rail's corner screws, and the scrollbar thumb.
 - **Panel Lift** (`{colors.panel-500}` / `#464b51`): Defined in `:root` as the lightest steel but not yet referenced by any component (reserve token).
 - **Engraved Ivory** (`{colors.ink}` / `#ece6d8`): Primary text — headlines, nameplate-adjacent display type, role values. The color of type engraved into the panel.
 - **Etched Gray** (`{colors.ink-dim}` / `#a2a5a4`): Secondary text — organization, location, dates, detail paragraphs, skill chips.
@@ -149,15 +149,15 @@ These are literal hex values inside the gauge SVG (`GaugeDial.tsx`), not `:root`
 **Character:** A condensed industrial display face doing all the shouting, and a plain-spoken grotesque doing all the recording. Big Shoulders reads as stamped/engraved casing lettering — it appears uppercase-only, always tracked. Barlow reads as the typed spec sheet underneath it, with tabular lining numerals everywhere so dates and durations align like a logbook.
 
 ### Hierarchy
-- **Display** (Big Shoulders Display Variable, weight 400, `text-3xl`–`text-5xl` / 1.875–3rem, line-height 1.05, uppercase, `text-balance`): chapter headlines ("Operating in the red zone, on purpose"), the section heading ("Two banks, one operator"), and the footer tagline ("Calibrated for pressure." at `text-4xl`–`text-5xl`). Tight leading, balanced wrapping.
-- **Headline** (Big Shoulders Display Variable, weight 700, `text-2xl`–`text-3xl`, line-height 1, uppercase, letter-spacing 0.04em): the name engraved on the brass nameplate.
-- **Title** (Big Shoulders Display Variable, weight 400, `text-sm`–`text-lg`, uppercase, letter-spacing 0.1–0.24em): zone tick labels, bank card headings ("SYSTEMS & SOFTWARE"), the mobile-bar name.
-- **Body** (Barlow, weight 400, `0.95rem`, line-height 1.625, max-width ~`max-w-md`–`max-w-xl`): detail paragraphs and the footer's honesty note. Role values are weight 500.
-- **Label** (Barlow, weights 400–700, `0.58rem`–`0.72rem`, uppercase, letter-spacing 0.04–0.1em): the ROLE/ORG/WHERE/WHEN keys (ink-faint), skill chips (`0.68rem`, tracking 0.08em, weight 400), provenance lines, the compact nameplate title line, the footer location stamp.
+- **Display** (Big Shoulders Display Variable, weight 400, `text-4xl`–`text-7xl` / 2.25–4.5rem, line-height 1.02, uppercase, `text-balance`, untracked at this scale): chapter headlines (`text-4xl`→`sm:text-6xl`), section headings ("Service record" at `text-4xl`→`sm:text-5xl`, "Two banks, one operator" at `text-4xl`→`sm:text-6xl`), and the footer tagline ("Calibrated for pressure." at `text-5xl`→`sm:text-7xl`). Tight leading, balanced wrapping.
+- **Headline** (Big Shoulders Display Variable, weight 600, `text-3xl`→`sm:text-4xl` / 1.875–2.25rem, line-height 1, uppercase, letter-spacing 0.04em): the name engraved on the brass nameplate (compact variant `text-lg`).
+- **Title** (Big Shoulders Display Variable, weight 400, `text-sm`–`text-2xl`, uppercase, letter-spacing 0.06–0.4em): chapter year/tick index rows, zone readouts, bank card headings (`text-xl`→`sm:text-2xl`), the mobile-bar name (`text-base`), and the cooldown certification stamp (`text-base` at 0.4em).
+- **Body** (Barlow, weight 400, `text-lg` / 1.125rem, line-height 1.625 via `leading-relaxed`, max-width `max-w-xl`–`max-w-2xl`): chapter fact values and detail paragraphs, the service record's intro line, and the footer's honesty note. Role values are weight 500; service-record table cells run slightly smaller (`0.95rem`–`1.02rem`).
+- **Label** (Barlow, weights 400–500, `0.64rem`–`0.8rem`, uppercase, letter-spacing 0.05–0.14em): the Role/Org/Where/When keys (`0.72rem`, tracking 0.1em), employment log strips (`0.78rem`, tracking 0.1em), service-record column headers (`0.72rem`, tracking 0.14em, weight 500) and Type column (`0.8rem`), skill chips (`0.78rem`, tracking 0.06em, weight 400), lamp labels (`0.78rem`), provenance lines (`0.78rem`), the compact nameplate title line, and the footer location stamp (`0.8rem`).
 - **Index numerals** (Barlow weight 700, 12px, on the dial SVG): year labels printed on the enamel face.
 
 ### Uppercase/tracking conventions (as built)
-Display voice is always uppercase. Tracking widens as type shrinks and as it becomes more "instrument": display headlines ~0.06em or none; year indexes 0.18em; tick labels 0.24em; zone readout and scroll cue 0.3em; CTA labels 0.18–0.2em; the cooldown stamp 0.4em — the widest tracking on the page, saved for the final certification line. Barlow labels sit between 0.04em and 0.1em. Body text is never uppercase and never tracked.
+Display voice is always uppercase. Tracking widens as type shrinks and as it becomes more "instrument": large display headlines run untracked; small display text 0.06em (mobile-bar name); year indexes 0.18em; tick labels 0.24em; zone readout and scroll cue 0.3em; CTA labels 0.16–0.18em; the cooldown stamp 0.4em — the widest tracking on the page, saved for the final certification line. Barlow labels sit between 0.05em and 0.14em. Body text is never uppercase and never tracked.
 
 ### Named Rules
 **The Engraved Case Rule.** Big Shoulders Display appears uppercase only, always letter-spaced, never as running text. If it reads like a sentence, it's Barlow.

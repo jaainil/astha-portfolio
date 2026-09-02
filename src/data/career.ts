@@ -8,6 +8,7 @@ export type ZoneFact = {
   location: string;
   dates: string;
   duration?: string;
+  employment?: string;
   detail: string;
   skills: string[];
   unlistedSkillCount?: number;
@@ -34,6 +35,7 @@ export const zones: Zone[] = [
     headline: "Where the calibration started",
     facts: [
       {
+        employment: "Education",
         role: "Higher Education, Science Stream",
         org: "Shri R. A. Patel Gyanjyot Gujarati Medium School",
         location: "Gujarat, India",
@@ -42,6 +44,7 @@ export const zones: Zone[] = [
         skills: [],
       },
       {
+        employment: "Education",
         role: "BE, Computer Engineering",
         org: "SVIT, Vasad",
         location: "Gujarat, India",
@@ -64,6 +67,7 @@ export const zones: Zone[] = [
         location: "Delhi, India",
         dates: "Jun 2020 – Jul 2020",
         duration: "2 mos",
+        employment: "Full-time",
         detail:
           "Built a neural network on Fashion MNIST, ran web scraping in Python, and studied neural-network and ML fundamentals.",
         skills: ["Artificial Neural Networks", "MTA"],
@@ -75,6 +79,7 @@ export const zones: Zone[] = [
         location: "Ahmedabad, Gujarat, India",
         dates: "Jan 2022 – Apr 2022",
         duration: "4 mos",
+        employment: "Full-time",
         detail:
           "Built a Project Management System in Django with a Postgres backend, using Git and Bootstrap. Handled deployment and error-solving.",
         skills: ["Django", "Database Administration"],
@@ -86,6 +91,7 @@ export const zones: Zone[] = [
         location: "Remote",
         dates: "May 2022 – Nov 2022",
         duration: "7 mos",
+        employment: "Internship",
         detail: "Learned web development: HTML, CSS, JS, Bootstrap, and Java.",
         skills: ["Database Management System (DBMS)", "Bootstrap"],
         unlistedSkillCount: 7,
@@ -104,6 +110,7 @@ export const zones: Zone[] = [
         location: "Vadodara, Gujarat, India",
         dates: "Dec 2022 – Mar 2023",
         duration: "4 mos",
+        employment: "Full-time",
         detail: "Full-time graduate trainee position.",
         note: "Sourced via LinkedIn.",
         skills: ["ASP.NET MVC", ".NET Framework"],
@@ -120,9 +127,10 @@ export const zones: Zone[] = [
       {
         role: "Sales Manager",
         org: "Eagle Pressure Systems",
-        location: "Ahmedabad, Gujarat, India · Remote",
+        location: "Ahmedabad, Gujarat, India",
         dates: "Mar 2023 – Mar 2024",
         duration: "1 yr 1 mo",
+        employment: "Remote",
         detail: "Full-time, remote.",
         skills: [],
       },
@@ -138,8 +146,9 @@ export const zones: Zone[] = [
       {
         role: "Assistant General Manager",
         org: "Eagle Pressure Systems",
-        location: "Ahmedabad, Gujarat, India · On-site",
+        location: "Ahmedabad, Gujarat, India",
         dates: "Mar 2024 – Present",
+        employment: "On-site",
         detail: "Good Manufacturing Practice (GMP) and Project Management.",
         skills: ["Good Manufacturing Practice (GMP)", "Project Management"],
       },

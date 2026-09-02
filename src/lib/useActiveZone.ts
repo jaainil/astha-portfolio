@@ -32,8 +32,6 @@ export function useActiveZone(count: number) {
   };
 
   useEffect(() => {
-    let raf = 0;
-
     const measure = () => {
       const viewportCenter = window.innerHeight / 2;
       let bestIndex = 0;
@@ -73,21 +71,16 @@ export function useActiveZone(count: number) {
         beforeStart,
         leaveFraction,
       });
-      raf = 0;
-    };
-
-    const onScroll = () => {
-      if (raf) return;
-      raf = requestAnimationFrame(measure);
     };
 
     measure();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
+    window.addEventListener("scroll", measure, { passive: true });
+    window.addEventListener("resize", measure);
+    window.addEventListener("orientationchange", measure);
     return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", measure);
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("orientationchange", measure);
     };
   }, [count]);
 

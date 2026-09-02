@@ -1,6 +1,7 @@
 import { CareerInstrument } from "@/components/CareerInstrument";
 import { Connect } from "@/components/Connect";
 import { InstrumentPanel } from "@/components/InstrumentPanel";
+import { ServiceRecord } from "@/components/ServiceRecord";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         Astha Prajapati, Assistant General Manager at Eagle Pressure Systems
       </h1>
       <CareerInstrument />
+      <ServiceRecord />
       <InstrumentPanel />
       <Connect />
     </main>

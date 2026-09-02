@@ -12,10 +12,10 @@ export function Connect() {
         }}
       />
       <div className="relative mx-auto max-w-xl">
-        <h2 className="font-display text-4xl uppercase leading-[1.05] text-balance text-ink sm:text-5xl">
+        <h2 className="font-display text-5xl uppercase leading-[1.02] text-balance text-ink sm:text-7xl">
           {person.tagline}
         </h2>
-        <p className="mt-5 text-[0.95rem] leading-relaxed text-ink-dim">
+        <p className="mt-6 text-lg leading-relaxed text-ink-dim">
           Every number and date on this page comes from her public LinkedIn
           record. No invented metrics, no placeholder testimonials. If the
           trajectory fits what you are hiring for, message her directly.
@@ -28,7 +28,7 @@ export function Connect() {
           className="group mt-10 inline-flex items-center justify-center"
         >
           <span
-            className="relative flex h-24 w-24 items-center justify-center rounded-full text-center font-display text-[0.72rem] font-bold uppercase leading-tight tracking-[0.08em] text-panel-950 transition-transform duration-200 group-hover:scale-105 group-active:scale-95 sm:h-28 sm:w-28"
+            className="relative flex h-28 w-28 items-center justify-center rounded-full text-center font-display text-sm font-bold uppercase leading-tight tracking-[0.08em] text-panel-950 transition-transform duration-200 group-hover:scale-105 group-active:scale-95 sm:h-36 sm:w-36 sm:text-base"
             style={{
               background:
                 "radial-gradient(circle at 35% 30%, var(--color-needle-bright), var(--color-needle) 60%, var(--color-needle-dim) 100%)",
@@ -45,7 +45,7 @@ export function Connect() {
         <div className="mx-auto mt-14 max-w-xs">
           <Nameplate compact />
         </div>
-        <p className="mt-4 text-[0.72rem] uppercase tracking-[0.1em] text-ink-faint">
+        <p className="mt-4 text-[0.8rem] uppercase tracking-[0.1em] text-ink-faint">
           {person.location}
         </p>
       </div>

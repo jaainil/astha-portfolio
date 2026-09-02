@@ -2,7 +2,7 @@ import { instrumentation } from "@/data/career";
 
 function Lamp({ label }: { label: string }) {
   return (
-    <div className="group flex flex-col items-center gap-2.5 px-3 py-2 text-center">
+    <div className="group flex flex-col items-center gap-3 px-3.5 py-2.5 text-center">
       <span
         className="relative flex h-4 w-4 items-center justify-center rounded-full"
         style={{
@@ -19,7 +19,7 @@ function Lamp({ label }: { label: string }) {
           }}
         />
       </span>
-      <span className="max-w-[8rem] text-[0.68rem] uppercase leading-tight tracking-[0.05em] text-ink-dim">
+      <span className="max-w-[9rem] text-[0.78rem] uppercase leading-tight tracking-[0.05em] text-ink-dim">
         {label}
       </span>
     </div>
@@ -38,10 +38,10 @@ function Bank({
   return (
     <div className="border border-panel-700 bg-panel-900/60 p-6 sm:p-8">
       <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-panel-700 pb-4">
-        <h3 className="font-display text-lg uppercase tracking-[0.1em] text-ink">
+        <h3 className="font-display text-xl uppercase tracking-[0.1em] text-ink sm:text-2xl">
           {label}
         </h3>
-        <span className="text-[0.7rem] uppercase tracking-[0.08em] text-ink-faint">
+        <span className="text-[0.78rem] uppercase tracking-[0.08em] text-ink-faint">
           via {origin}
         </span>
       </div>
@@ -58,7 +58,7 @@ export function InstrumentPanel() {
   return (
     <section className="border-t border-panel-700 bg-panel-950 px-6 py-24 lg:px-14">
       <div className="mx-auto max-w-5xl">
-        <h2 className="max-w-2xl font-display text-3xl uppercase leading-[1.05] text-balance text-ink sm:text-4xl">
+        <h2 className="max-w-3xl font-display text-4xl uppercase leading-[1.05] text-balance text-ink sm:text-6xl">
           Two banks, one operator
         </h2>
         <div className="mt-12 grid items-start gap-6 sm:grid-cols-2">

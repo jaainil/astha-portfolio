@@ -183,7 +183,7 @@ export function GaugeDial({
                 dominantBaseline="middle"
                 fontFamily="var(--font-body)"
                 fontWeight={700}
-                fontSize={12}
+                fontSize={13.5}
                 letterSpacing="0.02em"
                 fill="#3d372c"
               >

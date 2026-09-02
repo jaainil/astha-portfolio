@@ -18,7 +18,7 @@ export function Nameplate({ compact = false }: { compact?: boolean }) {
       />
       <div className="relative text-center">
         <p
-          className={`font-display uppercase leading-none text-[#140d06] ${compact ? "text-base" : "text-2xl sm:text-3xl"}`}
+          className={`font-display font-semibold uppercase leading-none text-[#140d06] ${compact ? "text-lg" : "text-3xl sm:text-4xl"}`}
           style={{
             letterSpacing: "0.04em",
             textShadow:
@@ -28,7 +28,7 @@ export function Nameplate({ compact = false }: { compact?: boolean }) {
           {person.name}
         </p>
         <p
-          className={`font-display font-bold uppercase text-[#f5ecd8] ${compact ? "mt-0.5 text-[0.58rem]" : "mt-1.5 text-[0.72rem] sm:text-xs"}`}
+          className={`font-display font-bold uppercase text-[#f5ecd8] ${compact ? "mt-0.5 text-[0.64rem]" : "mt-1.5 text-[0.82rem] sm:text-sm"}`}
           style={{
             letterSpacing: "0.08em",
             textShadow:

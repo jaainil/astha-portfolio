@@ -26,6 +26,31 @@ function LinkedInMark({ className }: { className?: string }) {
   );
 }
 
+function CornerScrews() {
+  const positions = [
+    "left-2 top-6",
+    "right-2 top-6",
+    "left-2 bottom-6",
+    "right-2 bottom-6",
+  ];
+  return (
+    <>
+      {positions.map((pos) => (
+        <span
+          key={pos}
+          aria-hidden="true"
+          className={`absolute ${pos} hidden h-1.5 w-1.5 rounded-full lg:block`}
+          style={{
+            background: "var(--color-panel-600)",
+            boxShadow:
+              "inset 0 1px 2px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.06)",
+          }}
+        />
+      ))}
+    </>
+  );
+}
+
 export function CareerInstrument() {
   const { ref: sectionRef, progress: sectionProgress } =
     useScrollProgress<HTMLElement>();
@@ -57,7 +82,7 @@ export function CareerInstrument() {
       aria-label="Career progression, read on a pressure gauge"
     >
       {/* Opening atmosphere: the facility she now leads, dissolving into the panel */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-screen overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-svh overflow-hidden">
         <Image
           src="/images/hero-atmosphere.png"
           alt=""
@@ -85,8 +110,9 @@ export function CareerInstrument() {
         }}
       />
 
-      <div className="relative grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-        <div className="fixed inset-x-0 top-0 z-20 flex items-center gap-4 border-b border-panel-700 bg-panel-950/95 px-5 py-4 backdrop-blur-sm lg:static lg:inset-auto lg:z-0 lg:sticky lg:top-0 lg:flex lg:h-screen lg:flex-col lg:items-center lg:justify-center lg:gap-0 lg:border-b-0 lg:bg-transparent lg:px-10 lg:py-0 lg:backdrop-blur-none">
+      <div className="relative grid grid-cols-1 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
+        <div className="fixed inset-x-0 top-0 z-20 flex items-center gap-4 border-b border-panel-700 bg-panel-950/95 px-5 py-4 backdrop-blur-sm lg:static lg:inset-auto lg:z-0 lg:sticky lg:top-0 lg:flex lg:h-svh lg:flex-col lg:items-center lg:justify-center lg:gap-0 lg:border-b-0 lg:bg-transparent lg:px-10 lg:py-0 lg:backdrop-blur-none">
+          <CornerScrews />
           <div className="w-20 shrink-0 lg:w-full lg:max-w-[400px]">
             <GaugeDial
               needleAngle={needleAngle}
@@ -103,21 +129,24 @@ export function CareerInstrument() {
             aria-label={`Open ${person.name}'s LinkedIn profile`}
             className="min-w-0 lg:hidden"
           >
-            <p className="font-display text-sm uppercase leading-tight tracking-[0.06em] text-ink">
+            <p className="font-display text-base uppercase leading-tight tracking-[0.06em] text-ink">
               {person.name}
             </p>
-            <p className="text-[0.6rem] uppercase leading-tight tracking-[0.04em] text-ink-faint">
+            <p className="text-[0.68rem] uppercase leading-tight tracking-[0.04em] text-ink-faint">
               {person.currentTitle} · {person.currentOrg}
             </p>
           </a>
 
-          <div className="mt-8 hidden w-full max-w-[360px] flex-col items-center lg:flex">
+          <div className="mt-8 hidden w-full max-w-[380px] flex-col items-center lg:flex">
             <Nameplate />
-            <p className="mt-5 font-display text-xs uppercase tracking-[0.3em] text-ink-faint">
+            <p className="mt-5 font-display text-sm uppercase tracking-[0.3em] text-ink-faint">
               {zones[activeIndex]?.tickLabel}
             </p>
+            <p className="mt-2 text-[0.72rem] uppercase tracking-[0.18em] text-ink-faint">
+              5 stations · 2016 to present
+            </p>
             {beforeStart && activeIndex === 0 ? (
-              <p className="mt-4 hidden font-display text-[0.68rem] uppercase tracking-[0.3em] text-ink-dim [animation:cuePulse_2.4s_ease-in-out_infinite] xl:block">
+              <p className="mt-4 hidden font-display text-[0.72rem] uppercase tracking-[0.3em] text-ink-dim [animation:cuePulse_2.4s_ease-in-out_infinite] xl:block">
                 scroll to advance the needle
               </p>
             ) : null}
@@ -125,15 +154,15 @@ export function CareerInstrument() {
               href={person.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 border border-needle/50 px-4 py-2 font-display text-[0.7rem] uppercase tracking-[0.2em] text-needle-bright transition-colors duration-200 hover:border-needle hover:bg-needle/10"
+              className="mt-6 inline-flex items-center gap-2 border border-needle/50 px-5 py-2.5 font-display text-sm uppercase tracking-[0.18em] text-needle-bright transition-colors duration-200 hover:border-needle hover:bg-needle/10"
             >
               Open the line on LinkedIn
-              <LinkedInMark className="h-3 w-3" />
+              <LinkedInMark className="h-3.5 w-3.5" />
             </a>
           </div>
         </div>
 
-        <div className="pt-[22vh] lg:pt-0">
+        <div className="pt-[26svh] lg:pt-0">
           {zones.map((zone, i) => (
             <ChapterPanel
               key={zone.id}
@@ -147,7 +176,7 @@ export function CareerInstrument() {
             className="hidden lg:flex h-[60vh] items-center justify-center"
             aria-hidden="true"
           >
-            <p className="font-display text-sm uppercase tracking-[0.4em] text-ink-faint">
+            <p className="font-display text-base uppercase tracking-[0.4em] text-ink-faint">
               certified: leadership operating zone
             </p>
           </div>
