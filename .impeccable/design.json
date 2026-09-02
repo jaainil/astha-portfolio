@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-02T09:30:00Z",
+  "title": "Design System: Astha Prajapati — Career Instrument",
+  "extensions": {
+    "colorMeta": {
+      "needle": {
+        "role": "primary",
+        "displayName": "Needle Red",
+        "canonical": "#e2402c",
+        "tonalRamp": ["#400000", "#680000", "#900000", "#b80300", "#e23f2c", "#ff6851", "#ff8e75", "#ffb499"]
+      },
+      "needle-bright": {
+        "role": "primary",
+        "displayName": "Needle Hot",
+        "canonical": "#ff6a48",
+        "tonalRamp": ["#3d0000", "#640000", "#8b0000", "#b31d00", "#dc4927", "#ff6f4d", "#ff9571", "#ffbb96"]
+      },
+      "needle-dim": {
+        "role": "primary",
+        "displayName": "Cooled Needle",
+        "canonical": "#7a2c22",
+        "tonalRamp": ["#2b0000", "#4e0000", "#72241b", "#96453a", "#bc675a", "#e28a7b", "#ffad9e", "#ffd3c2"]
+      },
+      "brass": {
+        "role": "secondary",
+        "displayName": "Fitting Brass",
+        "canonical": "#b6924f",
+        "tonalRamp": ["#1e0200", "#3c1d00", "#5b3b00", "#7c5b0f", "#9f7c39", "#c39f5c", "#e9c380", "#ffe9a4"]
+      },
+      "brass-bright": {
+        "role": "secondary",
+        "displayName": "Polished Brass",
+        "canonical": "#d9b876",
+        "tonalRamp": ["#1c0300", "#3a1e00", "#593c00", "#7a5c15", "#9d7d3c", "#c1a05f", "#e6c482", "#ffeaa6"]
+      },
+      "brass-dim": {
+        "role": "secondary",
+        "displayName": "Aged Brass",
+        "canonical": "#6b5730",
+        "tonalRamp": ["#170700", "#332100", "#523f17", "#725e37", "#947f57", "#b8a279", "#ddc69c", "#ffecc0"],
+        "note": "Reserve token — defined in :root, unreferenced by components."
+      },
+      "panel-950": {
+        "role": "neutral",
+        "displayName": "Panel Black",
+        "canonical": "#0d0f10",
+        "tonalRamp": ["#0a0b0c", "#232527", "#404244", "#5f6263", "#808384", "#a3a5a7", "#c7cacb", "#eceff0"]
+      },
+      "panel-900": {
+        "role": "neutral",
+        "displayName": "Panel Charcoal",
+        "canonical": "#141618",
+        "tonalRamp": ["#090b0d", "#232527", "#404245", "#5f6164", "#808385", "#a3a5a8", "#c7c9cc", "#eceff2"]
+      },
+      "panel-800": {
+        "role": "neutral",
+        "displayName": "Panel Graphite",
+        "canonical": "#1c1f22",
+        "tonalRamp": ["#090b0e", "#222528", "#3f4246", "#5e6265", "#7f8387", "#a2a5a9", "#c5cace", "#ebeff3"]
+      },
+      "panel-700": {
+        "role": "neutral",
+        "displayName": "Panel Seam",
+        "canonical": "#262a2e",
+        "tonalRamp": ["#080c0f", "#222629", "#3e4347", "#5d6266", "#7e8388", "#a1a6ab", "#c5cacf", "#eaeff5"]
+      },
+      "panel-600": {
+        "role": "neutral",
+        "displayName": "Panel Line",
+        "canonical": "#34383d",
+        "tonalRamp": ["#080b0f", "#22252a", "#3e4248", "#5d6267", "#7e8389", "#a1a5ac", "#c5cad0", "#eaeff5"]
+      },
+      "panel-500": {
+        "role": "neutral",
+        "displayName": "Panel Lift",
+        "canonical": "#464b51",
+        "tonalRamp": ["#080b10", "#21252b", "#3e4248", "#5d6268", "#7d838a", "#a0a6ad", "#c4cad1", "#e9eff7"],
+        "note": "Reserve token — defined in :root, unreferenced by components."
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Engraved Ivory",
+        "canonical": "#ece6d8",
+        "tonalRamp": ["#0f0b03", "#29251a", "#464236", "#666155", "#878275", "#aaa597", "#cec9bb", "#f4eee0"]
+      },
+      "ink-dim": {
+        "role": "neutral",
+        "displayName": "Etched Gray",
+        "canonical": "#a2a5a4",
+        "tonalRamp": ["#0a0c0b", "#232625", "#404342", "#5f6261", "#808382", "#a3a6a5", "#c7cac9", "#ecefee"]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Ghost Stamp",
+        "canonical": "#8a8f90",
+        "tonalRamp": ["#080c0d", "#222627", "#3e4344", "#5d6263", "#7e8384", "#a1a6a7", "#c5cacb", "#eaf0f1"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display / Engraved Index",
+        "purpose": "Big Shoulders Display Variable, uppercase only, always tracked (0.04–0.4em). Casing lettering: headlines, nameplate, tick labels, stamps. Never running text."
+      },
+      "body": {
+        "displayName": "Body / Spec Sheet",
+        "purpose": "Barlow for paragraphs and fact values. Tabular lining numerals site-wide (tnum/lnum) so dates align like a logbook. Never uppercase."
+      },
+      "label": {
+        "displayName": "Label / Stamp",
+        "purpose": "Barlow uppercase, 0.58–0.72rem, tracking 0.04–0.1em. Row keys, chips, provenance lines, location stamps."
+      }
+    },
+    "shadows": [
+      {
+        "name": "bezel-casing",
+        "value": "0 18px 60px -12px rgba(0,0,0,0.65), inset 0 2px 3px rgba(255,255,255,0.14), inset 0 -10px 22px rgba(0,0,0,0.6)",
+        "purpose": "The gauge bezel: ambient drop plus lit top edge and dark under-curve."
+      },
+      {
+        "name": "groove-recess",
+        "value": "inset 0 3px 10px rgba(0,0,0,0.75), inset 0 -1px 2px rgba(255,255,255,0.08)",
+        "purpose": "Channel carved between casing and glass; inset only."
+      },
+      {
+        "name": "nameplate-proud",
+        "value": "0 6px 16px -6px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.25)",
+        "purpose": "Brass plate sitting slightly proud of the panel."
+      },
+      {
+        "name": "lamp-bulb-glow",
+        "value": "0 0 7px 2px rgba(214,182,110,0.55)",
+        "purpose": "Warm glow around indicator-lamp bulbs; light is the shadow."
+      },
+      {
+        "name": "needle-redline-glow",
+        "value": "drop-shadow(0 0 10px rgba(226,64,44,0.85))",
+        "purpose": "Needle heats up in the final redline zone."
+      },
+      {
+        "name": "connect-disc",
+        "value": "0 10px 26px -8px rgba(226,64,44,0.55), inset 0 2px 3px rgba(255,255,255,0.35), inset 0 -6px 10px rgba(0,0,0,0.45)",
+        "purpose": "Red pilot-lamp button: glow outside, highlight and shade inside."
+      },
+      {
+        "name": "lamp-well",
+        "value": "inset 0 1px 3px rgba(0,0,0,0.7), inset 0 -1px 1px rgba(255,255,255,0.06)",
+        "purpose": "Drilled socket that receives each bulb."
+      }
+    ],
+    "motion": [
+      {
+        "name": "needle-spring",
+        "value": "critically damped spring, stiffness 60, damping 12, rAF-simulated toward scroll-clocked target (src/lib/motion.ts useDampedValue)",
+        "purpose": "Mechanical needle inertia: the needle lags and settles instead of snapping to scroll position. Bypassed under prefers-reduced-motion."
+      },
+      {
+        "name": "duration-fast",
+        "value": "200ms",
+        "purpose": "State responses: CTA color/border transitions, lamp bulb scale, disc scale."
+      },
+      {
+        "name": "duration-wash",
+        "value": "300ms",
+        "purpose": "Opacity washes: redline heat on dial face and viewport."
+      },
+      {
+        "name": "duration-crossfade",
+        "value": "500ms",
+        "purpose": "Chapter activation: left rule and year-index color crossfade."
+      },
+      {
+        "name": "cue-pulse",
+        "value": "opacity 0.55 → 1 → 0.55, 2.4s ease-in-out infinite (@keyframes cuePulse)",
+        "purpose": "'scroll to advance the needle' affordance; killed by the reduced-motion override."
+      },
+      {
+        "name": "glass-sweep",
+        "value": "scroll-linked translateX(-120% → 140%), mix-blend-mode: screen",
+        "purpose": "Light sweep across the gauge glass, position-driven by scroll progress (state, not animation)."
+      },
+      {
+        "name": "reduced-motion-kill",
+        "value": "@media (prefers-reduced-motion: reduce): animation/transition duration 0.01ms, iteration 1, !important",
+        "purpose": "Global fallback; the needle spring is additionally bypassed in JS."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px", "purpose": "Skill banks go two-column; Connect disc grows to 112px." },
+      { "name": "lg", "value": "1024px", "purpose": "Scrollytelling rail: sticky h-screen gauge column beside full-height chapter panels; mobile top bar dissolves." },
+      { "name": "xl", "value": "1280px", "purpose": "Scroll cue appears beneath the nameplate." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gauge Dial",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature instrument: brushed-steel bezel, recessed groove, enamel face with 250° arc, per-zone colored segments, ticks, and a spring-lagged red needle. Static snapshot shown; the live needle is scroll-driven.",
+      "html": "<div class=\"ds-gauge\"><div class=\"ds-gauge-bezel\"></div><div class=\"ds-gauge-groove\"></div><div class=\"ds-gauge-face\"><svg viewBox=\"0 0 400 400\" aria-hidden=\"true\"><path class=\"ds-gauge-track\" d=\"M 60.62 274.36 A 148 148 0 1 1 339.38 274.36\"/><path class=\"ds-gauge-seg\" d=\"M 60.62 274.36 A 148 148 0 0 1 159.18 57.98\"/><line class=\"ds-gauge-tick-major\" x1=\"200\" y1=\"28\" x2=\"200\" y2=\"48\"/><line class=\"ds-gauge-tick\" x1=\"256.87\" y1=\"35.53\" x2=\"251.22\" y2=\"55.14\"/><text class=\"ds-gauge-year\" x=\"130\" y=\"130\">'23</text><g class=\"ds-gauge-needle\"><line x1=\"185.69\" y1=\"224.34\" x2=\"317.78\" y2=\"117.13\"/><circle cx=\"200\" cy=\"200\" r=\"11\"/></g></svg><div class=\"ds-gauge-spec\"></div></div></div>",
+      "css": ".ds-gauge { position: relative; aspect-ratio: 1; max-width: 420px; } .ds-gauge-bezel { position: absolute; inset: 0; border-radius: 9999px; background: url(/textures/brushed-steel.png); background-size: 160% 160%; background-position: 20% 30%; box-shadow: 0 18px 60px -12px rgba(0,0,0,0.65), inset 0 2px 3px rgba(255,255,255,0.14), inset 0 -10px 22px rgba(0,0,0,0.6); } .ds-gauge-groove { position: absolute; inset: 4.5%; border-radius: 9999px; background: var(--color-panel-900); box-shadow: inset 0 3px 10px rgba(0,0,0,0.75), inset 0 -1px 2px rgba(255,255,255,0.08); } .ds-gauge-face { position: absolute; inset: 7%; border-radius: 9999px; overflow: hidden; background: url(/textures/gauge-enamel-face.png) center / cover; filter: brightness(0.97) saturate(0.9); } .ds-gauge-face svg { position: absolute; inset: 0; width: 100%; height: 100%; } .ds-gauge-track { fill: none; stroke: #3a352c; stroke-opacity: 0.55; stroke-width: 5; stroke-linecap: round; } .ds-gauge-seg { fill: none; stroke: #e2402c; stroke-width: 5; stroke-linecap: round; } .ds-gauge-tick { stroke: #5b5548; stroke-opacity: 0.55; stroke-width: 1.6; stroke-linecap: round; } .ds-gauge-tick-major { stroke: #5b5548; stroke-opacity: 0.55; stroke-width: 3; stroke-linecap: round; } .ds-gauge-year { font-family: var(--font-body, 'Barlow', sans-serif); font-weight: 700; font-size: 12px; letter-spacing: 0.02em; fill: #3d372c; text-anchor: middle; dominant-baseline: middle; } .ds-gauge-needle line { stroke: var(--color-needle); stroke-width: 4; stroke-linecap: round; filter: drop-shadow(0 0 10px rgba(226,64,44,0.85)); } .ds-gauge-needle circle { fill: var(--color-panel-800); stroke: var(--color-needle); stroke-width: 2.5; } .ds-gauge-spec { position: absolute; inset: 0; background: radial-gradient(circle at 30% 22%, rgba(255,255,255,0.16), transparent 55%); pointer-events: none; }"
+    },
+    {
+      "name": "Brass Nameplate",
+      "kind": "custom",
+      "refersTo": "nameplate",
+      "description": "Engraved brass identity plate carrying the name and current title; used full-size on the rail and compact in the footer.",
+      "html": "<div class=\"ds-nameplate\"><div class=\"ds-nameplate-shade\"></div><div class=\"ds-nameplate-text\"><p class=\"ds-nameplate-name\">Astha Prajapati</p><p class=\"ds-nameplate-title\">Assistant General Manager · Eagle Pressure Systems</p></div></div>",
+      "css": ".ds-nameplate { position: relative; overflow: hidden; border-radius: 3px; padding: 16px 28px; background: url(/textures/nameplate-brass.png) center / cover; box-shadow: 0 6px 16px -6px rgba(0,0,0,0.7), inset 0 1px 1px rgba(255,255,255,0.25); } .ds-nameplate-shade { position: absolute; inset: 0; background: rgba(10,9,6,0.18); mix-blend-mode: multiply; } .ds-nameplate-text { position: relative; text-align: center; } .ds-nameplate-name { font-family: var(--font-display, 'Big Shoulders Display Variable', sans-serif); text-transform: uppercase; line-height: 1; font-size: 1.5rem; letter-spacing: 0.04em; color: #140d06; text-shadow: 0 1px 0 rgba(255,255,255,0.4), 0 -1px 1px rgba(0,0,0,0.45); } .ds-nameplate-title { font-family: var(--font-display, 'Big Shoulders Display Variable', sans-serif); font-weight: 700; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.08em; margin-top: 6px; color: #f5ecd8; text-shadow: 0 1px 1px rgba(20,10,0,0.75), 0 -1px 0 rgba(255,255,255,0.18); }"
+    },
+    {
+      "name": "Rail CTA (Needle Ghost)",
+      "kind": "button",
+      "refersTo": "link-cta-needle",
+      "description": "Slim outlined LinkedIn CTA under the nameplate on the sticky rail; fills with a whisper of needle red on hover.",
+      "html": "<a class=\"ds-cta-needle\" href=\"#\">OPEN THE LINE ON LINKEDIN <svg viewBox=\"0 0 12 12\" width=\"12\" height=\"12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 10 10 2M4 2h6v6\"/></svg></a>",
+      "css": ".ds-cta-needle { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(226,64,44,0.5); padding: 8px 16px; font-family: var(--font-display, 'Big Shoulders Display Variable', sans-serif); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-needle-bright); background: transparent; text-decoration: none; transition: color 0.2s, background 0.2s, border-color 0.2s; } .ds-cta-needle:hover { border-color: var(--color-needle); background: rgba(226,64,44,0.1); } .ds-cta-needle:focus-visible { outline: 2px solid var(--color-needle-bright); outline-offset: 3px; }"
+    },
+    {
+      "name": "Redline CTA (Heavy Border)",
+      "kind": "button",
+      "refersTo": "link-cta-redline",
+      "description": "The climactic LinkedIn CTA appended to the final redline chapter; heavier border and fill than the rail variant.",
+      "html": "<a class=\"ds-cta-redline\" href=\"#\">CONNECT ON LINKEDIN <svg viewBox=\"0 0 12 12\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 10 10 2M4 2h6v6\"/></svg></a>",
+      "css": ".ds-cta-redline { display: inline-flex; align-items: center; gap: 12px; border: 2px solid var(--color-needle); background: rgba(226,64,44,0.1); padding: 12px 24px; font-family: var(--font-display, 'Big Shoulders Display Variable', sans-serif); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-needle-bright); text-decoration: none; transition: background 0.2s; } .ds-cta-redline:hover { background: rgba(226,64,44,0.2); } .ds-cta-redline:focus-visible { outline: 2px solid var(--color-needle-bright); outline-offset: 3px; }"
+    },
+    {
+      "name": "Connect Disc",
+      "kind": "button",
+      "refersTo": "button-connect-disc",
+      "description": "Circular red pilot-lamp button in the footer — the page's final call to action.",
+      "html": "<a class=\"ds-cta-disc\" href=\"#\">CONNECT<br>LINKEDIN</a>",
+      "css": ".ds-cta-disc { display: flex; align-items: center; justify-content: center; width: 96px; height: 96px; border-radius: 9999px; text-align: center; font-family: var(--font-display, 'Big Shoulders Display Variable', sans-serif); font-weight: 700; font-size: 0.72rem; text-transform: uppercase; line-height: 1.25; letter-spacing: 0.08em; color: var(--color-panel-950); text-decoration: none; background: radial-gradient(circle at 35% 30%, var(--color-needle-bright), var(--color-needle) 60%, var(--color-needle-dim) 100%); box-shadow: 0 10px 26px -8px rgba(226,64,44,0.55), inset 0 2px 3px rgba(255,255,255,0.35), inset 0 -6px 10px rgba(0,0,0,0.45); transition: transform 0.2s; } .ds-cta-disc:hover { transform: scale(1.05); } .ds-cta-disc:active { transform: scale(0.95); } .ds-cta-disc:focus-visible { outline: 2px solid var(--color-needle-bright); outline-offset: 3px; }"
+    },
+    {
+      "name": "Skill Chip",
+      "kind": "chip",
+      "refersTo": "chip-skill",
+      "description": "Square stamped tag for a confirmed skill; tooltip records the source organization.",
+      "html": "<span class=\"ds-chip\" title=\"via Drevol\">ASP.NET MVC</span>",
+      "css": ".ds-chip { display: inline-block; border: 1px solid rgba(138,143,144,0.5); padding: 2px 8px; font-family: var(--font-body, 'Barlow', sans-serif); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-dim); }"
+    },
+    {
+      "name": "Indicator Lamp",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Recessed brass bulb marking one skill inside a bank; the bulb swells on hover.",
+      "html": "<div class=\"ds-lamp\"><span class=\"ds-lamp-well\"><span class=\"ds-lamp-bulb\"></span></span><span class=\"ds-lamp-label\">Project Management</span></div>",
+      "css": ".ds-lamp { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 8px 12px; text-align: center; } .ds-lamp-well { display: flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 9999px; background: var(--color-panel-700); box-shadow: inset 0 1px 3px rgba(0,0,0,0.7), inset 0 -1px 1px rgba(255,255,255,0.06); } .ds-lamp-bulb { width: 7px; height: 7px; border-radius: 9999px; background: var(--color-brass-bright); box-shadow: 0 0 7px 2px rgba(214,182,110,0.55); transition: transform 0.2s; } .ds-lamp:hover .ds-lamp-bulb { transform: scale(1.25); } .ds-lamp-label { max-width: 8rem; font-family: var(--font-body, 'Barlow', sans-serif); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.25; color: var(--color-ink-dim); }"
+    },
+    {
+      "name": "Skill Bank Card",
+      "kind": "card",
+      "refersTo": "card-bank",
+      "description": "Square panel holding one bank of indicator lamps, with a display heading and a provenance line.",
+      "html": "<div class=\"ds-bank\"><div class=\"ds-bank-head\"><h3 class=\"ds-bank-title\">OPERATIONS &amp; LEADERSHIP</h3><span class=\"ds-bank-origin\">via Eagle Pressure Systems, 2023–present</span></div><div class=\"ds-bank-items\"><div class=\"ds-lamp\"><span class=\"ds-lamp-well\"><span class=\"ds-lamp-bulb\"></span></span><span class=\"ds-lamp-label\">Good Manufacturing Practice (GMP)</span></div><div class=\"ds-lamp\"><span class=\"ds-lamp-well\"><span class=\"ds-lamp-bulb\"></span></span><span class=\"ds-lamp-label\">Project Management</span></div></div></div>",
+      "css": ".ds-bank { border: 1px solid var(--color-panel-700); background: rgba(20,22,24,0.6); padding: 24px; } .ds-bank-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; border-bottom: 1px solid var(--color-panel-700); padding-bottom: 16px; } .ds-bank-title { font-family: var(--font-display, 'Big Shoulders Display Variable', sans-serif); font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-ink); margin: 0; } .ds-bank-origin { font-family: var(--font-body, 'Barlow', sans-serif); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-faint); } .ds-bank-items { display: flex; flex-wrap: wrap; gap: 12px 8px; margin-top: 8px; } .ds-lamp { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 8px 12px; text-align: center; } .ds-lamp-well { display: flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 9999px; background: var(--color-panel-700); box-shadow: inset 0 1px 3px rgba(0,0,0,0.7), inset 0 -1px 1px rgba(255,255,255,0.06); } .ds-lamp-bulb { width: 7px; height: 7px; border-radius: 9999px; background: var(--color-brass-bright); box-shadow: 0 0 7px 2px rgba(214,182,110,0.55); transition: transform 0.2s; } .ds-lamp:hover .ds-lamp-bulb { transform: scale(1.25); } .ds-lamp-label { max-width: 8rem; font-family: var(--font-body, 'Barlow', sans-serif); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.25; color: var(--color-ink-dim); }"
+    },
+    {
+      "name": "Chapter Dossier Row",
+      "kind": "card",
+      "refersTo": null,
+      "description": "One career chapter hanging off a 2px left rule that ignites needle red when active; facts render as a labeled spec grid.",
+      "html": "<div class=\"ds-chapter\"><div class=\"ds-chapter-index\"><span class=\"ds-chapter-year\">'23</span><span class=\"ds-chapter-tick\">SALES MANAGER</span></div><h2 class=\"ds-chapter-headline\">First command inside Eagle Pressure Systems</h2><div class=\"ds-chapter-fact\"><span class=\"ds-chapter-key\">ROLE</span><span class=\"ds-chapter-value-strong\">Sales Manager</span><span class=\"ds-chapter-key\">ORG</span><span class=\"ds-chapter-value\">Eagle Pressure Systems</span><span class=\"ds-chapter-key\">WHEN</span><span class=\"ds-chapter-value\">Mar 2023 – Mar 2024 · 1 yr 1 mo</span></div></div>",
+      "css": ".ds-chapter { max-width: 36rem; border-left: 2px solid var(--color-panel-600); padding-left: 24px; transition: border-color 0.5s; } .ds-chapter:hover, .ds-chapter.is-active { border-left-color: var(--color-needle); } .ds-chapter-index { display: flex; align-items: baseline; gap: 12px; } .ds-chapter-year { font-family: var(--font-display, 'Big Shoulders Display Variable', sans-serif); font-size: 0.875rem; letter-spacing: 0.18em; color: var(--color-brass); transition: color 0.5s; } .ds-chapter.is-active .ds-chapter-year { color: var(--color-needle-bright); } .ds-chapter-tick { font-family: var(--font-display, 'Big Shoulders Display Variable', sans-serif); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.24em; color: var(--color-ink-faint); } .ds-chapter-headline { font-family: var(--font-display, 'Big Shoulders Display Variable', sans-serif); font-size: 1.875rem; text-transform: uppercase; line-height: 1.05; color: var(--color-ink); margin: 12px 0 0; } .ds-chapter-fact { display: grid; grid-template-columns: auto 1fr; column-gap: 16px; row-gap: 4px; margin-top: 24px; font-size: 0.875rem; } .ds-chapter-key { color: var(--color-ink-faint); } .ds-chapter-value { color: var(--color-ink-dim); } .ds-chapter-value-strong { color: var(--color-ink); font-weight: 500; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Pressure Rising — the career read on an analog pressure gauge",
+    "overview": "This site is an instrument, not a résumé. The whole page is one charcoal-and-steel instrument panel in the idiom of the pressure-vessel industry the subject now leads: a calibrated dial face with an ivory enamel finish, a brushed-steel bezel, brass fittings, and a single red needle that sweeps clockwise as the visitor scrolls through her career. Facts are engraved, not printed — type reads like stamped index plates and etched gauge markings, set in a condensed display face at uppercase with wide tracking. The panel is dark, dense at the edges, and quiet; the only things that move are the needle, the light, and the heat. Density follows the instrument metaphor: information is arranged in labeled rows (ROLE / ORG / WHERE / WHEN) like a spec plate on a machine, and everything numeric uses tabular figures so dates align like a logbook. Cinematic atmosphere is always subordinate to scannability — name, title, employer, and dates are visible without motion. Confirmed visual rejections: the generic dark-mode dev-portfolio and the navy-and-headshot executive-bio default.",
+    "keyCharacteristics": [
+      "One dominant instrument (the gauge) persists on screen as a sticky rail while chapters scroll past it.",
+      "Color is mechanical: near-black steel grounds, engraved ivory text, brass for fittings and annotations, needle red strictly for the needle/redline system.",
+      "Depth is machined, not layered — inset shadows, textures, and light glows instead of generic card elevation.",
+      "Everything rectangular is square-cornered; circles are reserved for instrument bodies.",
+      "Motion is mechanical: scroll-clocked, spring-lagged, never bouncy or playful.",
+      "Facts carry provenance (\"via …\", \"+N more, unlisted on source\") like calibration stickers."
+    ],
+    "rules": [
+      {
+        "name": "The One Needle Rule",
+        "body": "Needle red exists only inside the instrument system — the needle, redline states, the Connect CTA, and state responses (text selection, scrollbar hover). It is never decoration, never a link color, never more than a sliver of any viewport.",
+        "section": "colors"
+      },
+      {
+        "name": "The Zone Gradient Rule",
+        "body": "Arc segments step from dark brass to needle red in one fixed order across the five career zones. Never shuffle the ramp, never recolor a zone — the progression is the story of rising pressure.",
+        "section": "colors"
+      },
+      {
+        "name": "The Steel Ground Rule",
+        "body": "All large surfaces come from the panel-950→panel-500 steel ramp. No pure black, no pure white, no blue-gray drift.",
+        "section": "colors"
+      },
+      {
+        "name": "The Engraved Case Rule",
+        "body": "Big Shoulders Display appears uppercase only, always letter-spaced, never as running text. If it reads like a sentence, it's Barlow.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Record Rule",
+        "body": "Every numeral on the page is tabular lining (font-feature-settings: \"tnum\" 1, \"lnum\" 1 on body). Dates, durations, and year labels align in columns like an instrument log; never disable it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Centerline Rule",
+        "body": "The active chapter is whichever panel's center is nearest the viewport centerline; there is no other activation logic. Panels own at least a full viewport height so the centerline always has a clear owner.",
+        "section": "layout"
+      },
+      {
+        "name": "The Machined Depth Rule",
+        "body": "A shadow must describe a physical relationship (above, recessed, glowing, lit from top-left). No soft ambient card elevation; if a surface doesn't read as hardware, it gets a seam instead of a shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the needle red at sliver scale — the needle line, glow, CTA disc, selection highlight. If a red region grows past a few percent of the viewport, it's the redline wash or you're breaking The One Needle Rule.",
+      "Do step arc/segment colors through the fixed ramp (#8a6f3a → #a07c3c → #b6924f → #c9622f → #e2402c) in zone order.",
+      "Do set all numerals tabular (tnum/lnum) — it's on body; don't override it.",
+      "Do uppercase and track every display-size line (Big Shoulders), widening tracking as size shrinks (up to 0.4em for the certification stamp).",
+      "Do give rectangular surfaces square corners and 1px Panel Seam borders; reserve circles for instrument bodies; use 3px only on the nameplate.",
+      "Do label facts with the ROLE/ORG/WHERE/WHEN key grid and carry provenance (\"via …\", \"+N more, unlisted on source\") rather than inventing data.",
+      "Do keep every raster's impeccable:prompt tEXt chunk intact when regenerating or cropping assets.",
+      "Do respect prefers-reduced-motion: the needle must snap (no spring), CSS animations/transitions collapse to 0.01ms, and content must remain fully readable with all motion off."
+    ],
+    "donts": [
+      "Don't use needle red for links, headings, or decoration outside the instrument system.",
+      "Don't introduce soft generic card shadows or large border radii — depth is machined (insets, glows, textures) or it's a seam.",
+      "Don't set Big Shoulders Display in lowercase, sentence case, or untracked; don't use it for body copy.",
+      "Don't hide name, title, employer, or dates behind motion — chapter content is statically visible; only the instrument animates.",
+      "Don't fabricate a headshot, metrics, testimonials, or contact channels; imagery stays atmospheric/industrial, and LinkedIn stays the only CTA.",
+      "Don't reorder or recolor the zone ramp, or add a sixth zone without extending the ramp and the tick geometry (50° per zone, 250° total sweep).",
+      "Don't drop the cooldown beat or the hero dissolve — removing them makes the redline climax end abruptly and the first frame read as a plain photo header."
+    ]
+  }
+}
