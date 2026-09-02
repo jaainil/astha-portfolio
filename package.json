@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "astha-portfolio",
+=======
+  "name": "astha",
+>>>>>>> d82b1ee (Initial commit from Create Next App)
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,8 +14,11 @@
     "format": "biome format --write"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@fontsource-variable/big-shoulders-display": "^5.3.0",
     "@fontsource/barlow": "^5.3.0",
+=======
+>>>>>>> d82b1ee (Initial commit from Create Next App)
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"
@@ -23,7 +30,10 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+<<<<<<< HEAD
     "playwright": "^1.62.1",
+=======
+>>>>>>> d82b1ee (Initial commit from Create Next App)
     "tailwindcss": "^4",
     "typescript": "^5"
   },
