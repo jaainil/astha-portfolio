@@ -90,6 +90,7 @@ export function CareerInstrument() {
           priority
           className="object-cover"
           style={{ opacity: 0.55 * (1 - heroDim) + 0.12 }}
+          suppressHydrationWarning
         />
         <div
           className="absolute inset-0"
